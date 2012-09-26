@@ -38,3 +38,10 @@ for i in range(_winreg.QueryInfoKey(h)[1]):
 	s = _winreg.EnumValue(h,i)
 	#a = _winreg.EnumKey(_winreg.HKEY_USER,i)
 	print s
+for i in (range(len(subkey))):
+    for i in (range(len(key))):
+        h= _winreg.OpenKey(q, w, 0, _winreg.KEY_READ)
+        if h != 0 :
+	   b= _winreg.QueryValue(q, w)
+	   print b
+	   print _winreg.QueryInfoKey(h)
